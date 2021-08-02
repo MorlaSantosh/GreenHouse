@@ -123,8 +123,6 @@ LOGIN_URL = 'login'
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 STATIC_ROOT= os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
-MEDIA_URL = '/images/'
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static')
 ]
-MEDIA_ROOT=os.path.join(BASE_DIR,'static/images')
