@@ -1,0 +1,23 @@
+{% extends 'ToDoApp/main.html'%}
+{% block content%}
+<div class="header-bar">
+    <h3>To Do List App</h3>
+    <h1>
+        Register
+    </h1>
+</div>
+<div class="card-body">
+    <form action="" method="POST">
+        {%csrf_token%}
+        {% for field in form %}
+           <label for="">{{field.label_tag|striptags}}</label> 
+            {{field}}
+            {%if field.errors%}
+            <p style="color: red;">{{field.errors|striptags}}</p>
+            {%endif%}
+        {% endfor %}
+        <input class="button"type="submit" value="Login" style="margin-top: 10px;">
+    </form>
+    <p>Already have an account! <a href="{% url 'login' %}">Login</a> </p>
+</div>
+{% endblock content %}
